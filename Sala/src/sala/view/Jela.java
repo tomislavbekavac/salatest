@@ -57,6 +57,7 @@ public class Jela extends javax.swing.JFrame {
         txtCijenaPoGlavi = new javax.swing.JTextField();
         btnDodaj = new javax.swing.JButton();
         btnPromjena = new javax.swing.JButton();
+        btnOcistiPolja = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -101,6 +102,13 @@ public class Jela extends javax.swing.JFrame {
             }
         });
 
+        btnOcistiPolja.setText("Očisti polja");
+        btnOcistiPolja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOcistiPoljaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -122,9 +130,12 @@ public class Jela extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(txtCijenaPoGlavi, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnDodaj)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnPromjena)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnOcistiPolja)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnDodaj)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnPromjena)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnObrisi)))
                 .addGap(88, 88, 88))
@@ -153,7 +164,9 @@ public class Jela extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnDodaj)
                             .addComponent(btnPromjena)
-                            .addComponent(btnObrisi)))
+                            .addComponent(btnObrisi))
+                        .addGap(55, 55, 55)
+                        .addComponent(btnOcistiPolja))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -241,6 +254,10 @@ public class Jela extends javax.swing.JFrame {
         ucitajEntitete();
     }//GEN-LAST:event_txtUvjetActionPerformed
 
+    private void btnOcistiPoljaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOcistiPoljaActionPerformed
+        ocistiPolja();
+    }//GEN-LAST:event_btnOcistiPoljaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -249,6 +266,7 @@ public class Jela extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDodaj;
     private javax.swing.JButton btnObrisi;
+    private javax.swing.JButton btnOcistiPolja;
     private javax.swing.JButton btnPromjena;
     private javax.swing.JCheckBox chbLimitator;
     private javax.swing.JLabel jLabel1;

@@ -56,6 +56,7 @@ public class Pica extends javax.swing.JFrame {
         btnObrisi = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         lstEntiteti = new javax.swing.JList<>();
+        btnOcistiPolja4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -100,6 +101,13 @@ public class Pica extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(lstEntiteti);
 
+        btnOcistiPolja4.setText("Očisti polja");
+        btnOcistiPolja4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOcistiPolja4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -116,20 +124,23 @@ public class Pica extends javax.swing.JFrame {
                         .addComponent(chbLimitator)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnDodaj)
-                        .addGap(28, 28, 28)
-                        .addComponent(btnPromjena)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnObrisi)
-                        .addGap(70, 70, 70))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(txtNaziv, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)
                             .addComponent(txtCijenaPoGlavi, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnOcistiPolja4)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnDodaj)
+                                .addGap(28, 28, 28)
+                                .addComponent(btnPromjena)))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnObrisi)
+                        .addGap(70, 70, 70))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,6 +163,8 @@ public class Pica extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(txtCijenaPoGlavi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnOcistiPolja4)
+                        .addGap(57, 57, 57)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnDodaj)
                             .addComponent(btnPromjena)
@@ -242,6 +255,10 @@ public class Pica extends javax.swing.JFrame {
         ucitajEntitete();
     }//GEN-LAST:event_txtUvjetActionPerformed
 
+    private void btnOcistiPolja4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOcistiPolja4ActionPerformed
+        ocistiPolja();
+    }//GEN-LAST:event_btnOcistiPolja4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -250,6 +267,11 @@ public class Pica extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDodaj;
     private javax.swing.JButton btnObrisi;
+    private javax.swing.JButton btnOcistiPolja;
+    private javax.swing.JButton btnOcistiPolja1;
+    private javax.swing.JButton btnOcistiPolja2;
+    private javax.swing.JButton btnOcistiPolja3;
+    private javax.swing.JButton btnOcistiPolja4;
     private javax.swing.JButton btnPromjena;
     private javax.swing.JCheckBox chbLimitator;
     private javax.swing.JLabel jLabel1;

@@ -46,8 +46,7 @@ public class Jelovnik extends Entitet implements Serializable{
     @ManyToMany 
     private List<Jelo> jelo = new ArrayList<>();
     
-    @OneToMany (mappedBy = "jelovnik")
-    private List<Svadba> svadba = new ArrayList<>();
+    
 
     public List<Pice> getPice() {
         return pice;
@@ -65,13 +64,7 @@ public class Jelovnik extends Entitet implements Serializable{
         this.jelo = jelo;
     }
 
-    public List<Svadba> getSvadba() {
-        return svadba;
-    }
-
-    public void setSvadba(List<Svadba> svadba) {
-        this.svadba = svadba;
-    }
+    
 
     @Override
     public String toString() {

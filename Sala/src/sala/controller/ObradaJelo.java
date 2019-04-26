@@ -34,7 +34,10 @@ public class ObradaJelo extends Obrada<Jelo> implements ObradaSucelje<Jelo>{
 
     @Override
     public void kontrola(Jelo j) throws SalatestException {
-         
+          if(j.getNaziv().trim().isEmpty()) {
+            throw new SalatestException("Naziv je prazan obavezan unos");
+        }
+      
         
     }
 

@@ -29,7 +29,9 @@ public class ObradaJelovnik extends Obrada<Jelovnik> implements ObradaSucelje<Je
 
     @Override
     public void kontrola(Jelovnik je) throws SalatestException {
-        
+        if(je.getNaziv().trim().isEmpty()) {
+            throw new SalatestException("Naziv je prazan obavezan unos");
+        }
     }
 
     @Override
@@ -40,9 +42,12 @@ public class ObradaJelovnik extends Obrada<Jelovnik> implements ObradaSucelje<Je
 
     @Override
     public void obrisi(Jelovnik je) throws SalatestException {
-        if(je.getSvadba().size()>0) {
-            throw new SalatestException("jelovnik se ne može izbrisati dodan je svadbi");
-        }
+        if(je.getJelo().size()>0){
+           throw new SalatestException("Ne možete brisati, na jelovniku ima jelo");
+       }
+        if(je.getPice().size()>0){
+           throw new SalatestException("Ne možete brisati, na jelovniku ima piće");
+       }
         dao.delete(je);
     }
 

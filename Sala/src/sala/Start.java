@@ -20,13 +20,12 @@ public class Start {
 //        Osoblje o;
 //        
 //        List<Osoblje> lista = new ArrayList<>();
-//       
-//        for (int i=0; i<10; i++) {
+//       for (int i = 0; i<100; i++)  {
 //            o = new Osoblje();
 //            
-//            o.setKonobar("Konobar o" +i);
-//            o.setKuhar("Kuhar o" +i);
-//            o.setPomocni_kuhar("Pomocni kuhar o" +i);
+//            o.setIme("Pero");
+//            o.setPrezime("Perić");
+//            o.setRadnoMjesto("Konobar);
 //           
 //            lista.add(o);
 //        }

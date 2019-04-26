@@ -89,6 +89,7 @@ public class Jelovnici extends javax.swing.JFrame {
         txtUvjetPice = new javax.swing.JTextField();
         chbLimitatorPice = new javax.swing.JCheckBox();
         chbLimitatorJelo = new javax.swing.JCheckBox();
+        btnOcistiPolja4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -182,6 +183,13 @@ public class Jelovnici extends javax.swing.JFrame {
 
         chbLimitatorJelo.setText("Limitiraj Jelo na 20");
 
+        btnOcistiPolja4.setText("Očisti polja");
+        btnOcistiPolja4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOcistiPolja4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -192,11 +200,17 @@ public class Jelovnici extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnDodaj, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPromjeni, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnObrisi, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(37, 37, 37)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnDodaj, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnPromjeni, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnObrisi, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(37, 37, 37))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(47, 47, 47)
+                                .addComponent(btnOcistiPolja4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -255,7 +269,9 @@ public class Jelovnici extends javax.swing.JFrame {
                                 .addGap(46, 46, 46)
                                 .addComponent(btnPromjeni)
                                 .addGap(32, 32, 32)
-                                .addComponent(btnObrisi))))
+                                .addComponent(btnObrisi)
+                                .addGap(60, 60, 60)
+                                .addComponent(btnOcistiPolja4))))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(jLabel7)
@@ -469,6 +485,10 @@ public class Jelovnici extends javax.swing.JFrame {
         ucitajPica(jelovnik);
     }//GEN-LAST:event_btnMakniPiceSJelovnikaActionPerformed
 
+    private void btnOcistiPolja4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOcistiPolja4ActionPerformed
+        ocistiPolja();
+    }//GEN-LAST:event_btnOcistiPolja4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -491,6 +511,7 @@ public class Jelovnici extends javax.swing.JFrame {
     private javax.swing.JButton btnMakniJeloSJelovnika;
     private javax.swing.JButton btnMakniPiceSJelovnika;
     private javax.swing.JButton btnObrisi;
+    private javax.swing.JButton btnOcistiPolja4;
     private javax.swing.JButton btnPromjeni;
     private javax.swing.JCheckBox chbLimitatorJelo;
     private javax.swing.JCheckBox chbLimitatorPice;

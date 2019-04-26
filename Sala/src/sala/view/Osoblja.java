@@ -48,6 +48,7 @@ public class Osoblja extends javax.swing.JFrame {
         btnDodajj = new javax.swing.JButton();
         btnPromjena = new javax.swing.JButton();
         btnObrisi = new javax.swing.JButton();
+        btnOcistiPolja4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -85,6 +86,13 @@ public class Osoblja extends javax.swing.JFrame {
             }
         });
 
+        btnOcistiPolja4.setText("Očisti polja");
+        btnOcistiPolja4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOcistiPolja4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -106,9 +114,14 @@ public class Osoblja extends javax.swing.JFrame {
                         .addGap(69, 69, 69)
                         .addComponent(btnDodajj)
                         .addGap(35, 35, 35)
-                        .addComponent(btnPromjena)
-                        .addGap(39, 39, 39)
-                        .addComponent(btnObrisi)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(btnOcistiPolja4))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnPromjena)
+                                .addGap(39, 39, 39)
+                                .addComponent(btnObrisi)))))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -136,7 +149,9 @@ public class Osoblja extends javax.swing.JFrame {
                     .addComponent(btnDodajj)
                     .addComponent(btnPromjena)
                     .addComponent(btnObrisi))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnOcistiPolja4)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();
@@ -218,6 +233,10 @@ public class Osoblja extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnObrisiActionPerformed
 
+    private void btnOcistiPolja4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOcistiPolja4ActionPerformed
+        ocistiPolja();
+    }//GEN-LAST:event_btnOcistiPolja4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -226,6 +245,7 @@ public class Osoblja extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDodajj;
     private javax.swing.JButton btnObrisi;
+    private javax.swing.JButton btnOcistiPolja4;
     private javax.swing.JButton btnPromjena;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

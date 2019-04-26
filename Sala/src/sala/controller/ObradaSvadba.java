@@ -29,15 +29,14 @@ public class ObradaSvadba extends Obrada<Svadba> implements ObradaSucelje<Svadba
 
     @Override
     public void kontrola(Svadba s) throws SalatestException {
-       if(s.getBroj_gostiju()==null) {
-           throw new SalatestException("Broj gostiju je null, obavezan unos");
-       }
-         if(s.getBroj_gostiju().trim().isEmpty()) {
-           throw new SalatestException("Broj gostiju je prazan, obavezan unos");
-       }
-         if(s.getCijena()!=null &&  s.getCijena().compareTo(BigDecimal.ZERO)<0){
-            throw  new SalatestException("Cijena mora biti pozitivan broj");
+        
+        if(s.getNaziv().trim().isEmpty()) {
+            throw new SalatestException("Naziv je prazan obavezan unos");
         }
+      
+         if(s.getJelovnik().getSifra()==0) {
+             throw new SalatestException("Obavezan unos Jelovnika");
+         }
          
     }
 
@@ -49,7 +48,9 @@ public class ObradaSvadba extends Obrada<Svadba> implements ObradaSucelje<Svadba
 
     @Override
     public void obrisi(Svadba s) throws SalatestException {
-       
+       if(s.getMladenci().size()>0){
+           throw new SalatestException("Ne možete brisati, svadba ima mladence");
+       }
         dao.delete(s);
     }
     

@@ -49,6 +49,7 @@ public class Mladencii extends javax.swing.JFrame {
         lstEntiteti = new javax.swing.JList<>();
         txtUvjet = new javax.swing.JTextField();
         chbLimitator = new javax.swing.JCheckBox();
+        btnOcistiPolja4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -97,6 +98,13 @@ public class Mladencii extends javax.swing.JFrame {
         chbLimitator.setSelected(true);
         chbLimitator.setText("Limitiraj na 20");
 
+        btnOcistiPolja4.setText("Očisti polja");
+        btnOcistiPolja4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOcistiPolja4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -113,20 +121,24 @@ public class Mladencii extends javax.swing.JFrame {
                         .addGap(35, 35, 35)
                         .addComponent(chbLimitator)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnDodaj)
-                        .addGap(28, 28, 28)
-                        .addComponent(btnPromjena)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnObrisi))
-                    .addComponent(jLabel1)
-                    .addComponent(txtKorisnik, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtAdresa, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtMobitel, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtUgovor, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(btnDodaj)
+                            .addGap(28, 28, 28)
+                            .addComponent(btnPromjena)
+                            .addGap(18, 18, 18)
+                            .addComponent(btnObrisi))
+                        .addComponent(jLabel1)
+                        .addComponent(txtKorisnik, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2)
+                        .addComponent(txtAdresa, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3)
+                        .addComponent(txtMobitel, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel4)
+                        .addComponent(txtUgovor, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addComponent(btnOcistiPolja4)))
                 .addGap(509, 509, 509))
         );
         layout.setVerticalGroup(
@@ -162,7 +174,9 @@ public class Mladencii extends javax.swing.JFrame {
                             .addComponent(btnDodaj)
                             .addComponent(btnPromjena)
                             .addComponent(btnObrisi))
-                        .addGap(60, 60, 60))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnOcistiPolja4)
+                        .addGap(19, 19, 19))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(34, Short.MAX_VALUE))))
@@ -250,6 +264,10 @@ public class Mladencii extends javax.swing.JFrame {
       ucitajEntitete();
     }//GEN-LAST:event_txtUvjetActionPerformed
 
+    private void btnOcistiPolja4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOcistiPolja4ActionPerformed
+        ocistiPolja();
+    }//GEN-LAST:event_btnOcistiPolja4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -258,6 +276,7 @@ public class Mladencii extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDodaj;
     private javax.swing.JButton btnObrisi;
+    private javax.swing.JButton btnOcistiPolja4;
     private javax.swing.JButton btnPromjena;
     private javax.swing.JCheckBox chbLimitator;
     private javax.swing.JLabel jLabel1;

@@ -40,7 +40,7 @@ public class Izbornik extends javax.swing.JFrame {
 
         jMenu1.setText("Sala");
 
-        jMenuItem1.setText("Mladencii");
+        jMenuItem1.setText("Mladenci");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -48,7 +48,7 @@ public class Izbornik extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
-        jMenuItem2.setText("Pica");
+        jMenuItem2.setText("Pića");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
